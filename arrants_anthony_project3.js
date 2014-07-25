@@ -67,9 +67,26 @@ var personFunction = function() {
         console.log(peopleArray[person] + " wants to join as well.");
     }
     console.log(peopleArray.pop() + " has decided not to come with us though.")
+    return peopleArray;
 };
 
+// Number function
 
+var numberFunction = function(number) {
+    
+    var i;
+    var endCounter = number; 
+    
+    for (i = 0; i < endCounter; i++) {
+        
+        number -= 1;
+        
+        console.log("We have " + number + " minutes until we reach our destination.");
+        
+    }
+    
+    return number;
+}
 
 // String function
 var stringFunction = function(string1, string2) {
@@ -80,10 +97,15 @@ var stringFunction = function(string1, string2) {
 
 // Function Calls
 nameFunction(thePrompt);
-var myReturn = confirmFunc(theConfirmation, thePrompt);
+var myBoolean = confirmFunc(theConfirmation, thePrompt);
 var myString = stringFunction("Glad we finally made it here", "Where to now?");
-personFunction();
+var myNumber = numberFunction(185);
+var myArray = personFunction();
 
 // Outputs
-console.log("Ready to go:",myReturn);
+console.log("Ready to go:",myBoolean);
 console.log(myString);
+console.log("Boolean:", myBoolean + ".");
+console.log("String:", myString + ".");
+console.log("Number:", myNumber + ".");
+console.log("Array:", myArray + ".");
