@@ -104,7 +104,6 @@ var myArray = personFunction();
 
 // Outputs
 console.log("Ready to go:",myBoolean);
-console.log(myString);
 console.log("Boolean:", myBoolean + ".");
 console.log("String:", myString + ".");
 console.log("Number:", myNumber + ".");
