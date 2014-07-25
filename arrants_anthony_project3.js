@@ -109,7 +109,7 @@ var JSONObj = JSON.parse(JSONStr);
 
 console.log("Ready to go:",myReturn);
 console.log("We need " + myNumber + " gallons of gas to get to our destination.");
-console.log("We have " + peopleArray.length.toString() + ".");
+console.log("We have " + peopleArray.length.toString() + " who are ready to embark on a journey.");
 console.log(myString);
 console.log(JSONObj.People[0].Name);
 console.log(JSONObj.People[0].Age);
