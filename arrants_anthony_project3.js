@@ -1,6 +1,6 @@
-// Globals
-
-var peopleArray = ["Anthony", "Emily", "Lee", "Derek"];
+// Anthony Arrats
+// July 24, 2014
+// SDI 1407
 
 // Prompt
 
@@ -53,31 +53,23 @@ var confirmFunc = function(confirmation, personName) {
     return confirmation;    
 };
 
-//Loop through array
+// Array and loop
 
-var i;
-for (i = 0; i < peopleArray.length; i++)
-{
-    console.log(peopleArray[i]);
-}
 
-// Number function
 
-var numberFunction = function(number) {
+
+var personFunction = function() {
+    var peopleArray = ["Emily", "Anthony", "John", "Bill"];
+    var arrayLength = peopleArray.length;
+    console.log(arrayLength + " is how many people who want to join in.");
     
-    var i;
-    var endCounter = number; 
-    
-    for (i = 0; i < endCounter; i++) {
-        
-        number -= 1;
-        
-        console.log("We have " + number + " minutes until we reach our destination.");
-        
+    for (var person in peopleArray) {
+        console.log(peopleArray[person] + " wants to join as well.");
     }
-    
-    return number;
-}
+    console.log(peopleArray.pop() + " has decided not to come with us though.")
+};
+
+
 
 // String function
 var stringFunction = function(string1, string2) {
@@ -86,30 +78,12 @@ var stringFunction = function(string1, string2) {
     
 }
 
-// Array function
-
-var arrayFunction = function() {
-    for (i = 0; i < peopleArray.length; i++)
-    {
-        console.log(peopleArray[i]);
-    }
-}
-
 // Function Calls
 nameFunction(thePrompt);
 var myReturn = confirmFunc(theConfirmation, thePrompt);
-var myNumber = numberFunction(185);
 var myString = stringFunction("Glad we finally made it here", "Where to now?");
-
-// JSON
-
-var JSONObj = JSON.parse(JSONStr);
+personFunction();
 
 // Outputs
-
 console.log("Ready to go:",myReturn);
-console.log("We need " + myNumber + " gallons of gas to get to our destination.");
-console.log("We have " + peopleArray.length.toString() + " who are ready to embark on a journey.");
 console.log(myString);
-console.log(JSONObj.People[0].Name);
-console.log(JSONObj.People[0].Age);
